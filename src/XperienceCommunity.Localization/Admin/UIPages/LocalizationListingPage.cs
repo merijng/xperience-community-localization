@@ -20,8 +20,8 @@ public class LocalizationListingPage : ListingPage
     {
         PageConfiguration.ColumnConfigurations
             .AddColumn(nameof(LocalizationKeyInfo.LocalizationKeyItemId), "ID")
-            .AddColumn(nameof(LocalizationKeyInfo.LocalizationKeyItemName), "Name")
-            .AddColumn(nameof(LocalizationKeyInfo.LocalizationKeyItemDescription), "Description");
+            .AddColumn(nameof(LocalizationKeyInfo.LocalizationKeyItemName), "Name", searchable: true)
+            .AddColumn(nameof(LocalizationKeyInfo.LocalizationKeyItemDescription), "Description", searchable: true);
 
         PageConfiguration.HeaderActions.AddLink<LocalizationCreatePage>("Create");
         PageConfiguration.AddEditRowAction<LocalizationEditPage>();
